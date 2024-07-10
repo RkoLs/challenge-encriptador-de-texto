@@ -5,15 +5,17 @@ const encryptionMap = {
     'm': '0101', 'n': '0110', 'o': '0111', 'p': '1000',
     'q': '1001', 'r': '1010', 's': '1011', 't': '1100',
     'u': '1101', 'v': '1110', 'w': '1111', 'x': '00001',
-    'y': '00010','z': '00011', ' ': '\u200B', '\n': '\u200B' 
+    'y': '00010', 'z': '00011', ' ': '\u200B', '\n': '\u200B'
+};
 
 const decryptionMap = Object.fromEntries(
     Object.entries(encryptionMap).map(([k, v]) => [v, k])
 );
 
-const separator = '\u200B'; 
+const separator = '\u200B'; // caractere invisível
+
 function removeSpecialCharacters(text) {
-    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 \n]/g, "").toLowerCase();
 }
 
 function encrypt(text) {
@@ -24,9 +26,6 @@ function encrypt(text) {
 function decrypt(text) {
     return text.split(separator).map(code => decryptionMap[code] !== undefined ? decryptionMap[code] : code).join('');
 }
-
-// Restante do seu código para interação com o HTML permanece igual
-
 
 document.getElementById('encrypt-btn').addEventListener('click', function() {
     const inputText = document.getElementById('input-text').value;
