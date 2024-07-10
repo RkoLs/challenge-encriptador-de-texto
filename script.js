@@ -6,6 +6,7 @@ const encryptionMap = {
     'q': '1001', 'r': '1010', 's': '1011', 't': '1100',
     'u': '1101', 'v': '1110', 'w': '1111', 'x': '00001',
     'y': '00010','z': '00011', ' ': ' '  
+};
 
 const decryptionMap = Object.fromEntries(
     Object.entries(encryptionMap).map(([k, v]) => [v, k])
@@ -25,6 +26,7 @@ function encrypt(text) {
 function decrypt(text) {
     return text.split(separator).map(code => decryptionMap[code] !== undefined ? decryptionMap[code] : code).join('');
 }
+
 
 document.getElementById('encrypt-btn').addEventListener('click', function() {
     const inputText = document.getElementById('input-text').value;
