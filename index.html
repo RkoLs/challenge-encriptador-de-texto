@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador de Mensagem - by RkoLs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <img class="logo" src="assets/img/icon2.png" alt="logo Rk">
+        <button type="button" class="modo__noturno">
+            <img class="modo__noturno__img" src="./assets/brilho-e-contraste.png" alt="modo noturno">
+        </button>
+    </header>
+
+    <main class="content">
+
+        <section class="content__entrada">
+            <h1>Bem-vindo</h1>
+            <textarea class="caixa__de__entrada" id="input-text" name="texto" rows="5" cols="33"
+                placeholder="Digite seu texto..."></textarea>
+
+            <p class="content__info">
+                <img src="assets/img/bi_exclamation-circle-fill.png" alt="info icon">
+                Apenas letras (maiúsculas ou minúsculas), sem números ou símbolos especiais.
+            </p>
+            <div class="content__buttons">
+                <button id="encrypt-btn">Criptografar</button>
+                <button id="decrypt-btn">Descriptografar</button>
+            </div>
+        </section>
+
+        <section class="caixa__de__saida">
+            <div id="iniciacao-mensagem">
+                <img class="imagem" src="./assets/img/High quality products 1 1.png" alt="imagem">
+                <h2 class="caixa__de__saida__tituto">Nenhuma mensagem encontrada
+                    <p class="caixa__de__saida__texto">Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
+                </h2>
+            </div>
+
+            <div id="resposta-mensagem" style="display: none;">
+                <section class="caixa-resposta">
+                    <textarea id="output-text" class="mensagem" cols="20" rows="10"></textarea>
+                    <button class="button-copiar" id="copy-btn">Copiar</button>
+                    <span id="copy-msg" style="display: none;">Texto copiado com sucesso!</span>
+                </section>
+            </div>
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <p><em>Powered by <strong>RkoLs</strong></em></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

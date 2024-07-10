@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #f5f5f5;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #131968;
+    --cor-quartenaria: #ffffff;
+    --cor-hoover1: #000000;
+    --cor-hoover2: #000000;
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    overflow-x: hidden;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('assets/img/tech.png');
+    background-size: contain;
+    background-position: right;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    max-width: 55px; 
+    height: auto;
+    opacity: 0.8;
+}
+
+.modo__noturno {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--cor-quartenaria);
+    border: none;
+    background-color: transparent;
+    border-radius: 45%;
+    display: none;
+}
+
+.modo__noturno:hover {
+    background-color: var(--cor-hoover1);
+    cursor: pointer;
+}
+
+.modo__noturno__img {
+    width: 2.5rem;
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.content__entrada {
+    padding-left: 10%;
+}
+
+.content__entrada,
+.content__saida {
+    width: 100%;
+    max-width: 600px;
+}
+
+.caixa__de__entrada,
+.caixa__de__saida {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.caixa__de__entrada::placeholder {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+}
+
+.caixa__de__entrada {
+    color: var(--cor-secundaria);
+    font-size: 1.0rem;
+    font-family: var(--fonte-primaria);
+    min-height: 300px;
+}
+
+.content__info {
+    font-family: var(--fonte-primaria);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 10px 0px;
+}
+
+.content__buttons {
+    gap: 1.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+}
+
+#encrypt-btn,
+#decrypt-btn {
+    width: 100%;
+
+    max-width: 328px;
+
+    padding: 15px;
+
+    text-align: center;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quartenaria);
+    cursor: pointer;
+}
+
+#encrypt-btn:hover,
+#decrypt-btn:hover {
+    background-color: var(--cor-terciaria);
+}
+
+#decrypt-btn {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+}
+
+.caixa__de__saida {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 2rem;
+    background-color: var(--cor-quartenaria);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.caixa__de__saida__tituto {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    color: #343A40;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.caixa__de__saida__texto {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    color: #343A40;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.mensagem {
+    background-color: transparent;
+    min-height: 340px;
+}
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 200;
+    padding: 1px;
+}
+
+#resposta-mensagem {
+    display: none;
+}
+
+.caixa-resposta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+    gap: 1rem;
+}
+
+.mensagem {
+    border: none;
+    color: #495057;
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+}
+
+.button-copiar {
+    width: 100%;
+
+    max-width: 336px;
+
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    border: 1px solid var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-quartenaria);
+}
+
+.button-copiar:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-quartenaria);
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) and (min-width: 802px) {
+    .cabecalho {
+        flex-direction: row;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content__entrada {
+        padding: 0;
+        align-items: center;
+        width: auto;
+    }
+
+    .caixa__de__saida {
+        box-shadow: 0px 24px 32px -8px #00000014;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .content__buttons {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .content__entrada {
+        padding: 0 !important;
+        align-items: center !important;
+        width: auto !important;
+    }
+
+    .content__buttons {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    .caixa__de__saida {
+        box-shadow: 0px 24px 32px -8px #00000014;
+    }
+}
+
+@media (max-width: 794px) {
+    .cabecalho {
+        flex-direction: row;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .content {
+        padding: 1rem;
+        flex-direction: column !important;
+
+    }
+
+    .content__entrada,
+    .content__saida {
+        max-width: none;
+        width: 100%;
+
+    }
+
+    .content__buttons {
+        flex-direction: column !important;
+        gap: 1rem;
+
+    }
+
+    .caixa__de__saida {
+        box-shadow: 0px 24px 32px -8px #00000014;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .button-copiar {
+        width: 100%;
+        max-width: 280px;
+    }
+}
