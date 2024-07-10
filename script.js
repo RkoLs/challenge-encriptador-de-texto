@@ -5,14 +5,14 @@ const encryptionMap = {
     'm': '0101', 'n': '0110', 'o': '0111', 'p': '1000',
     'q': '1001', 'r': '1010', 's': '1011', 't': '1100',
     'u': '1101', 'v': '1110', 'w': '1111', 'x': '00001',
-    'y': '00010','z': '00011', ' ': ' '  // Manter o espaço como ele mesmo
+    'y': '00010','z': '00011', ' ': ' '  
 };
 
 const decryptionMap = Object.fromEntries(
     Object.entries(encryptionMap).map(([k, v]) => [v, k])
 );
 
-const separator = '\u200B'; // Zero width space
+const separator = '\u200B'; // 
 
 function removeSpecialCharacters(text) {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, "").toLowerCase();
