@@ -15,7 +15,7 @@ const decryptionMap = Object.fromEntries(
 const separator = '\u200B'; // 
 
 function removeSpecialCharacters(text) {
-    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 \n]/g, "").toLowerCase();
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
 function encrypt(text) {
