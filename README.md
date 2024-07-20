@@ -42,7 +42,7 @@ Para usar o Encriptador de Texto, siga estas instruções:
 
 ## Preview
 
-![Preview do Encriptador](https://raw.githubusercontent.com/RkoLs/challenge-encriptador-de-texto/main/assets/img/preview.png)
+![Preview do Encriptador](https://raw.githubusercontent.com/RkoLs/challenge-encriptador-de-texto/main/assets/img/v4m3jOk.png)
 
 ## Acesso à Aplicação
 
