@@ -26,7 +26,7 @@ O projeto está estruturado com arquivos separados para cada linguagem e um dire
 - `index.html`: Página principal do encriptador com a estrutura HTML.
 - `styles.css`: Arquivo CSS para estilização da interface.
 - `script.js`: Script JavaScript responsável pela lógica de encriptação e desencriptação.
-- `assets/img/`: Diretório contendo imagens utilizadas no projeto.
+- `assets/img`: Diretório contendo imagens utilizadas no projeto.
 
 ## Como Usar
 
