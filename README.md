@@ -32,7 +32,7 @@ O projeto está estruturado com arquivos separados para cada linguagem e um dire
 
 Para usar o Encriptador de Texto, siga estas instruções:
 
-1. Acesse a aplicação através do link: [Encriptador de Texto](https://encriptador-de-texto-ejzdd3kz6-rkols-projects.vercel.app).
+1. Acesse a aplicação através do link: [Encriptador de Texto](https://encriptador-de-texto-rk.vercel.app).
 2. Insira o texto que deseja encriptar no campo de entrada.
 3. Clique no botão "Encriptar" para obter o texto encriptado.
 4. Use o botão "Copiar" para copiar o texto encriptado para a área de transferência.
